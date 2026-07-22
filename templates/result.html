@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Room Analysis</title>
+</head>
+<body>
+    <h1>Uploaded Room Photo</h1>
+    <img src="{{ url_for('static', filename='uploads/' + image_file) }}" width="400">
+
+    <h2>Detected Dominant Wall Color</h2>
+    <div style="width:150px; height:150px; background-color:{{ color }}; border:1px solid black;"></div>
+    <p>Color value: {{ color }}</p>
+
+    <br><br>
+    <a href="/">Upload Another Photo</a>
+</body>
+</html>
